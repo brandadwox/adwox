@@ -10,8 +10,8 @@ export const siteConfig = {
     "ADWOX Advertising Network is a next-generation outdoor digital advertising platform delivering unmatched visibility through Apartment Entrance LED Displays, School Bus Branding, and Auto LED Advertising.",
 
   // Contact — update these when the client confirms
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "6305551412",
-  phones: ["6305551412", "9441673791", "9492337337"],
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "9441673791",
+  phones: ["9441673791"],
   email: "brand.adwox@gmail.com",
   website: "www.adwox.in",
 

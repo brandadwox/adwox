@@ -83,24 +83,17 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href={`tel:${siteConfig.phones[0]}`}
-                  className="flex items-center gap-2 text-secondary-text text-sm hover:text-gold transition-colors"
-                >
-                  <Phone size={14} className="text-gold/60" />
-                  {siteConfig.phones[0]}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`tel:${siteConfig.phones[1]}`}
-                  className="flex items-center gap-2 text-secondary-text text-sm hover:text-gold transition-colors"
-                >
-                  <Phone size={14} className="text-gold/60" />
-                  {siteConfig.phones[1]}
-                </a>
-              </li>
+              {siteConfig.phones.map((phone) => (
+                <li key={phone}>
+                  <a
+                    href={`tel:${phone}`}
+                    className="flex items-center gap-2 text-secondary-text text-sm hover:text-gold transition-colors"
+                  >
+                    <Phone size={14} className="text-gold/60" />
+                    {phone}
+                  </a>
+                </li>
+              ))}
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
