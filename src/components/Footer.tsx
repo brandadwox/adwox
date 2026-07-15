@@ -26,8 +26,15 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <a href="#" className="inline-block mb-4">
-              <span className="text-2xl font-heading font-bold text-gold-gradient">
+            <a href="#" className="flex items-center gap-3 mb-4 group">
+              <div className="w-10 h-10 rounded-lg overflow-hidden border border-gold/20 bg-dark-card flex items-center justify-center flex-shrink-0">
+                <img
+                  src="/images/logo.jpg"
+                  alt="ADWOX Logo"
+                  className="w-full h-full object-cover scale-[1.35] -translate-y-[8%]"
+                />
+              </div>
+              <span className="text-xl font-heading font-bold text-white group-hover:text-gold transition-colors">
                 ADWOX
               </span>
             </a>

@@ -7,6 +7,7 @@ export const services = [
     shortTitle: "Apartment Entrance",
     subtitle: "Engage residents exactly where they live.",
     icon: Building2,
+    image: "/images/apartment-entrance-mockup.jpg",
     description:
       "Our premium LED display boards are installed at apartment entrances, offering continuous advertising exposure to residents, visitors, delivery partners, and daily commuters. Apartment entrance advertising delivers one of the highest advertising recall rates because audiences see the message repeatedly every day.",
     features: [
@@ -59,6 +60,7 @@ export const services = [
     shortTitle: "School Bus",
     subtitle: "Reaching families, students, and communities.",
     icon: Bus,
+    image: "/images/school-bus-mockup.jpg",
     description:
       "Reach families, students, teachers, and premium residential communities through our school bus LED advertising network. School buses travel through carefully planned routes every day, providing consistent visibility in high-income residential and educational zones.",
     features: [
@@ -104,6 +106,7 @@ export const services = [
     shortTitle: "Auto LED",
     subtitle: "Moving. Impactful. Unstoppable.",
     icon: Car,
+    image: "/images/auto-rickshaw-mockup.jpg",
     description:
       "Take your brand directly into the heart of the city. Our LED display-equipped auto rickshaws travel across busy commercial areas, residential neighborhoods, shopping districts, business hubs, and major traffic corridors, creating continuous exposure throughout the day.",
     features: [

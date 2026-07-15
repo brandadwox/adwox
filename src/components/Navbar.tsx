@@ -36,15 +36,22 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <span className="text-2xl sm:text-3xl font-heading font-bold tracking-tight text-gold-gradient">
-              ADWOX
-            </span>
-            <span className="hidden sm:block text-[10px] uppercase tracking-[0.2em] text-secondary-text leading-tight">
-              Advertising
-              <br />
-              Network
-            </span>
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg overflow-hidden border border-gold/20 bg-dark-card flex items-center justify-center flex-shrink-0">
+              <img
+                src="/images/logo.jpg"
+                alt="ADWOX Logo"
+                className="w-full h-full object-cover scale-[1.35] -translate-y-[8%]"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-lg sm:text-xl font-heading font-bold tracking-tight text-white leading-none group-hover:text-gold transition-colors">
+                ADWOX
+              </span>
+              <span className="text-[8px] uppercase tracking-[0.2em] text-secondary-text leading-none mt-1">
+                Advertising Network
+              </span>
+            </div>
           </a>
 
           {/* Desktop Links */}

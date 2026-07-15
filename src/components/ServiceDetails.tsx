@@ -45,92 +45,118 @@ export default function ServiceDetails() {
               </motion.div>
 
               {/* Two Column Layout */}
-              <div className={`grid lg:grid-cols-2 gap-10 lg:gap-16 ${isEven ? "" : "lg:direction-rtl"}`}>
-                {/* Benefits */}
+              <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+                {/* Visual Mockup Column (5 cols) */}
                 <motion.div
                   initial={{ opacity: 0, x: isEven ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="space-y-5"
+                  className={`lg:col-span-5 ${isEven ? "lg:order-1" : "lg:order-2"} w-full`}
                 >
-                  <h3 className="font-heading text-lg font-semibold text-gold flex items-center gap-2">
-                    <Sparkles size={18} />
-                    Why This Works
-                  </h3>
-                  {service.benefits.map((benefit, i) => (
-                    <div
-                      key={i}
-                      className="glass-card p-4 sm:p-5 transition-all duration-300"
-                    >
-                      <h4 className="font-heading font-semibold text-white mb-1.5">
-                        {benefit.title}
-                      </h4>
-                      <p className="text-secondary-text text-sm leading-relaxed">
-                        {benefit.description}
-                      </p>
+                  <div className="relative aspect-[4/3] sm:aspect-video lg:aspect-[3/4] rounded-2xl overflow-hidden border border-gold/25 shadow-2xl group bg-dark-card">
+                    <img
+                      src={service.image}
+                      alt={`${service.title} Mockup`}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+
+                    {/* Glowing border glow effect on hover */}
+                    <div className="absolute inset-0 border border-gold/0 group-hover:border-gold/30 rounded-2xl transition-colors duration-300" />
+
+                    {/* Visual details badge */}
+                    <div className="absolute top-4 left-4 bg-dark/80 backdrop-blur-md border border-gold/30 text-gold text-[10px] uppercase font-bold tracking-wider px-3 py-1.5 rounded-full">
+                      Live Mockup Preview
                     </div>
-                  ))}
+                  </div>
                 </motion.div>
 
-                {/* Features + Long-term Value */}
+                {/* Content Column (7 cols) */}
                 <motion.div
                   initial={{ opacity: 0, x: isEven ? 30 : -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="space-y-8"
+                  className={`lg:col-span-7 ${isEven ? "lg:order-2" : "lg:order-1"} space-y-8`}
                 >
-                  {/* Features List */}
+                  {/* Why This Works (Benefits) */}
                   <div>
-                    <h3 className="font-heading text-lg font-semibold text-white mb-4">
-                      Features
+                    <h3 className="font-heading text-lg font-semibold text-gold flex items-center gap-2 mb-4">
+                      <Sparkles size={18} />
+                      Why This Works
                     </h3>
-                    <div className="grid sm:grid-cols-2 gap-3">
-                      {service.features.map((feature, i) => (
+                    <div className="space-y-3">
+                      {service.benefits.map((benefit, i) => (
                         <div
                           key={i}
-                          className="flex items-start gap-3 text-sm"
+                          className="glass-card p-4 transition-all duration-300 border border-white/5"
                         >
-                          <CheckCircle
-                            size={16}
-                            className="text-gold flex-shrink-0 mt-0.5"
-                          />
-                          <span className="text-secondary-text">
-                            {feature}
-                          </span>
+                          <h4 className="font-heading font-semibold text-white text-sm mb-1">
+                            {benefit.title}
+                          </h4>
+                          <p className="text-secondary-text text-xs sm:text-sm leading-relaxed">
+                            {benefit.description}
+                          </p>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  {/* Target Industries */}
-                  {service.targets && (
-                    <div className="glass-card p-5 sm:p-6 border border-gold/10">
-                      <h3 className="font-heading text-lg font-semibold text-gold mb-4">
-                        {service.targetLabel || "Perfect For"}
+                  {/* Features & Ideal For Grid */}
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    {/* Features List */}
+                    <div>
+                      <h3 className="font-heading text-base font-semibold text-white mb-3">
+                        Key Features
                       </h3>
-                      <div className="grid grid-cols-2 gap-3">
-                        {service.targets.map((target, i) => (
+                      <div className="space-y-2.5">
+                        {service.features.map((feature, i) => (
                           <div
                             key={i}
-                            className="flex items-start gap-2 text-sm"
+                            className="flex items-start gap-2.5 text-xs sm:text-sm"
                           >
-                            <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0 mt-1.5" />
-                            <span className="text-secondary-text">{target}</span>
+                            <CheckCircle
+                              size={14}
+                              className="text-gold flex-shrink-0 mt-0.5"
+                            />
+                            <span className="text-secondary-text">
+                              {feature}
+                            </span>
                           </div>
                         ))}
                       </div>
                     </div>
-                  )}
+
+                    {/* Target Industries */}
+                    {service.targets && (
+                      <div>
+                        <h3 className="font-heading text-base font-semibold text-gold mb-3">
+                          {service.targetLabel || "Perfect For"}
+                        </h3>
+                        <div className="grid grid-cols-2 gap-2">
+                          {service.targets.map((target, i) => (
+                            <div
+                              key={i}
+                              className="flex items-center gap-2 text-xs text-secondary-text"
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-gold/50 flex-shrink-0" />
+                              <span className="truncate">{target}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
 
                   {/* CTA */}
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center gap-2 bg-gold-gradient text-dark px-6 py-3 rounded-lg font-bold text-sm hover:shadow-lg hover:shadow-gold/20 transition-all hover:scale-[1.03]"
-                  >
-                    Get a Quote for {service.shortTitle}
-                  </a>
+                  <div className="pt-2">
+                    <a
+                      href="#contact"
+                      className="inline-flex items-center gap-2 bg-gold-gradient text-dark px-6 py-3.5 rounded-lg font-bold text-sm hover:shadow-lg hover:shadow-gold/20 transition-all hover:scale-[1.03]"
+                    >
+                      Get a Quote for {service.shortTitle}
+                    </a>
+                  </div>
                 </motion.div>
               </div>
             </div>

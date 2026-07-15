@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import ServiceDetails from "@/components/ServiceDetails";
-import CampaignSimulator from "@/components/CampaignSimulator";
 import Founder from "@/components/Founder";
 import WhyAdwox from "@/components/WhyAdwox";
 import Industries from "@/components/Industries";
@@ -18,7 +17,6 @@ export default function Home() {
       <Hero />
       <Services />
       <ServiceDetails />
-      <CampaignSimulator />
       <Founder />
       <WhyAdwox />
       <Industries />

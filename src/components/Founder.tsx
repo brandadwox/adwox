@@ -22,50 +22,19 @@ export default function Founder() {
             className="relative"
           >
             {/* Styled frame for founder visual */}
-            <div className="relative aspect-[3/4] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-gold/20">
-              {/* Dark premium background with gold accent */}
-              <div className="absolute inset-0 bg-gradient-to-br from-dark-card via-dark-subtle to-dark-card" />
+            <div className="relative aspect-square max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-gold/25 shadow-2xl group">
+              <img
+                src="/images/logo.jpg"
+                alt="ADWOX Official Brand Card"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
 
-              {/* Central content */}
-              <div className="relative h-full flex flex-col items-center justify-center p-8 text-center">
-                {/* Monogram */}
-                <div className="w-24 h-24 rounded-full border-2 border-gold/40 flex items-center justify-center mb-6">
-                  <span className="text-4xl font-heading font-bold text-gold-gradient">
-                    A
-                  </span>
-                </div>
-
-                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-1">
-                  {siteConfig.founder.name}
-                </h3>
-                <p className="text-gold text-sm font-medium mb-4">
-                  {siteConfig.founder.role}
+              {/* Overlay shadow mask */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <p className="text-gold text-xs uppercase tracking-wider font-semibold">
+                  ADWOX Official Brand Card
                 </p>
-                <p className="text-secondary-text text-xs tracking-wide">
-                  {siteConfig.founder.tagline}
-                </p>
-
-                {/* Decorative divider */}
-                <div className="w-16 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent mt-6 mb-6" />
-
-                {/* Brand pillars */}
-                <div className="grid grid-cols-2 gap-3 w-full max-w-xs">
-                  {["Innovation", "Quality", "Transparency", "Reliability"].map(
-                    (pillar) => (
-                      <div
-                        key={pillar}
-                        className="text-[10px] uppercase tracking-wider text-gold/60 py-2 px-3 border border-gold/10 rounded-lg font-medium"
-                      >
-                        {pillar}
-                      </div>
-                    )
-                  )}
-                </div>
               </div>
-
-              {/* Corner gold accents */}
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-gold/30 rounded-tl-2xl" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-gold/30 rounded-br-2xl" />
             </div>
           </motion.div>
 
