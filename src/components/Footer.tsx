@@ -5,9 +5,11 @@ import { siteConfig } from "@/content/siteConfig";
 
 const quickLinks = [
   { label: "Services", href: "#services" },
+  { label: "About", href: "#about" },
   { label: "Why ADWOX", href: "#why-adwox" },
   { label: "Industries", href: "#industries" },
   { label: "Packages", href: "#packages" },
+  { label: "Process", href: "#process" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];

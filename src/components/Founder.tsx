@@ -6,7 +6,7 @@ import { Quote } from "lucide-react";
 
 export default function Founder() {
   return (
-    <section id="founder" className="py-20 sm:py-28 section-dark relative overflow-hidden">
+    <section id="about" className="py-20 sm:py-28 section-dark relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gold/[0.02] rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold/[0.02] rounded-full blur-3xl" />
