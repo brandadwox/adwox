@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden section-dark"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden section-dark pt-28 pb-12 sm:pt-0 sm:pb-0"
     >
       {/* Animated Background */}
       <div className="absolute inset-0">
