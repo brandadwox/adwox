@@ -7,6 +7,8 @@ import {
   Gem,
   Car,
   Film,
+  Compass,
+  Hotel,
 } from "lucide-react";
 
 export const industries = [
@@ -49,5 +51,15 @@ export const industries = [
     name: "Campaigns & Entertainment",
     description: "Movie Promotions, Events, Tourism & Government Campaigns",
     icon: Film,
+  },
+  {
+    name: "Tourism",
+    description: "Travel Agencies, Packages & Destinations",
+    icon: Compass,
+  },
+  {
+    name: "Hotels",
+    description: "Hotels, Resorts & Premium Hospitality",
+    icon: Hotel,
   },
 ] as const;

@@ -8,6 +8,7 @@ const quickLinks = [
   { label: "Why ADWOX", href: "#why-adwox" },
   { label: "Industries", href: "#industries" },
   { label: "Packages", href: "#packages" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
 

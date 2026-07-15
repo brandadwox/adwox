@@ -49,7 +49,7 @@ export const siteConfig = {
     name: "Alim Mohammad",
     role: "Founder & CEO",
     tagline: "Visionary Leader | Entrepreneur | Innovator",
-    bio: "ADWOX Advertising Network is one of India's emerging Digital Out-of-Home (DOOH) media companies, offering premium LED display advertising solutions across high-traffic urban environments. We specialize in installing high-brightness LED display systems on moving and fixed advertising platforms that provide continuous brand visibility throughout the day and night.",
+    bio: "ADWOX Advertising Network is one of India's emerging Digital Out-of-Home (DOOH) media companies, offering premium LED display advertising solutions across high-traffic urban environments. We specialize in installing high-brightness LED display systems on moving and fixed advertising platforms that provide continuous brand visibility throughout the day and night. Whether your audience is travelling through busy city roads, entering residential communities, or commuting on school transportation, ADWOX ensures your brand stays visible where it matters most. We believe outdoor advertising should be intelligent, flexible, measurable, and visually powerful.",
     mission:
       "To empower brands with innovative, affordable, and high-impact outdoor advertising solutions through city autos, school buses, and apartment entrance LED display networks.",
     vision:
