@@ -39,9 +39,9 @@ export default function Navbar() {
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg overflow-hidden border border-gold/20 bg-dark-card flex items-center justify-center flex-shrink-0">
               <img
-                src="/images/logo.jpg"
+                src="/images/navbar-logo.jpg"
                 alt="ADWOX Logo"
-                className="w-full h-full object-cover scale-[1.35] -translate-y-[8%]"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="flex flex-col">
