@@ -11,6 +11,7 @@ import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
+// Test comment to verify git push and trigger Vercel deployment pipeline
 export default function Home() {
   return (
     <>
