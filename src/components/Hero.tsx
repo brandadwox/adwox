@@ -72,11 +72,11 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6"
         >
-          <span className="text-white">India&apos;s Premium</span>
+          <span className="text-white">India&apos;s Next-Generation</span>
           <br />
-          <span className="text-gold-gradient">Outdoor Advertising</span>
+          <span className="text-gold-gradient">Digital Outdoor</span>
           <br />
-          <span className="text-white">Network</span>
+          <span className="text-white">Advertising Network</span>
         </motion.h1>
 
         {/* Subheading */}
@@ -84,9 +84,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="max-w-2xl mx-auto text-base sm:text-lg text-secondary-text leading-relaxed mb-10"
+          className="max-w-3xl mx-auto text-base sm:text-lg text-secondary-text leading-relaxed mb-10"
         >
-          {siteConfig.subheadline}
+          {siteConfig.description}
         </motion.p>
 
         {/* CTA Buttons */}
@@ -97,16 +97,16 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="#services"
+            href="#contact"
             className="bg-gold-gradient text-dark px-8 py-3.5 rounded-lg font-bold text-base hover:shadow-lg hover:shadow-gold/25 transition-all duration-300 hover:scale-[1.03] w-full sm:w-auto text-center"
           >
-            Explore Services
+            Start Your Campaign
           </a>
           <a
-            href="#contact"
+            href="#services"
             className="border border-gold/40 text-gold px-8 py-3.5 rounded-lg font-medium text-base hover:bg-gold/10 transition-all duration-300 w-full sm:w-auto text-center"
           >
-            Get Quote
+            View Our Network
           </a>
         </motion.div>
 
@@ -117,9 +117,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="mt-16 sm:mt-20 text-lg sm:text-xl md:text-2xl"
         >
-          <span className="text-secondary-text">We Don&apos;t Just Advertise, </span>
+          <span className="text-secondary-text">Make every journey and destination a </span>
           <span className="text-gold-gradient font-bold italic">
-            We Move Brands
+            powerful advertising opportunity.
           </span>
         </motion.p>
       </div>

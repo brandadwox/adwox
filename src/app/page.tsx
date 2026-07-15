@@ -8,6 +8,7 @@ import Industries from "@/components/Industries";
 import Packages from "@/components/Packages";
 import Process from "@/components/Process";
 import Clients from "@/components/Clients";
+import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -24,6 +25,7 @@ export default function Home() {
       <Packages />
       <Process />
       <Clients />
+      <Faq />
       <Contact />
       <Footer />
     </>

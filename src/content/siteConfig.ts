@@ -1,21 +1,21 @@
 export const siteConfig = {
   name: "ADWOX",
   fullName: "ADWOX Advertising Network",
-  tagline: "Your Brand. Everywhere.",
-  headline: "India's Premium Outdoor Advertising Network",
+  tagline: "Your Brand. Everywhere People Go.",
+  headline: "India's Next-Generation Digital Outdoor Advertising Network",
   subheadline:
-    "Transforming high-traffic spaces into powerful advertising opportunities using LED displays, transit branding and apartment entrance media.",
+    "Transforming outdoor advertising with innovative LED display solutions that deliver unmatched visibility, flexibility, and impact.",
   ctaTagline: "We Don't Just Advertise, We Move Brands",
   description:
-    "ADWOX Advertising Network is a next-generation outdoor digital advertising platform delivering unmatched visibility through Apartment Entrance LED Displays, School Bus Branding, and Auto LED Advertising.",
+    "ADWOX Advertising Network is transforming outdoor advertising with innovative LED display solutions that deliver unmatched visibility, flexibility, and impact. We connect brands with millions of people through strategically placed LED displays on city auto rickshaws, school buses, and apartment entrance locations.",
 
-  // Contact — update these when the client confirms
+  // Contact
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "9441673791",
-  phones: ["9441673791"],
+  phones: ["+91 94416 73791", "+91 83338 03377"],
   email: "brand.adwox@gmail.com",
   website: "www.adwox.in",
 
-  // Social links (placeholders — update when available)
+  // Social links
   socials: {
     instagram: "#",
     facebook: "#",
@@ -25,9 +25,9 @@ export const siteConfig = {
 
   // SEO
   seo: {
-    title: "ADWOX Advertising Network | India's Premium Outdoor Advertising",
+    title: "ADWOX Advertising Network | India's Next-Generation Digital Outdoor Advertising",
     description:
-      "Transform your brand visibility with ADWOX, India's leading outdoor advertising network specializing in Apartment Entrance LED, School Bus Branding, and Auto LED Advertising.",
+      "ADWOX Advertising Network is transforming outdoor advertising with innovative LED display solutions that deliver unmatched visibility, flexibility, and impact.",
     keywords: [
       "outdoor advertising",
       "DOOH",
@@ -46,11 +46,22 @@ export const siteConfig = {
 
   // Founder
   founder: {
-    name: "Alim",
+    name: "Alim Mohammad",
     role: "Founder & CEO",
     tagline: "Visionary Leader | Entrepreneur | Innovator",
-    bio: "Building India's most powerful mobile advertising network, one street, one campus, and one apartment gate at a time. At ADWOX, we don't display advertisements. We create visibility, build brand value, and deliver meaningful business growth.",
+    bio: "ADWOX Advertising Network is one of India's emerging Digital Out-of-Home (DOOH) media companies, offering premium LED display advertising solutions across high-traffic urban environments. We specialize in installing high-brightness LED display systems on moving and fixed advertising platforms that provide continuous brand visibility throughout the day and night.",
     mission:
-      "To transform everyday public spaces into premium advertising platforms that connect brands with real people in real places.",
+      "To empower brands with innovative, affordable, and high-impact outdoor advertising solutions through city autos, school buses, and apartment entrance LED display networks.",
+    vision:
+      "To become India's most trusted Digital Outdoor Advertising Network by building a nationwide ecosystem of intelligent LED advertising platforms that help businesses connect with people in everyday life.",
+    values: [
+      "Innovation",
+      "Quality",
+      "Transparency",
+      "Reliability",
+      "Customer Success",
+      "Integrity",
+      "Professional Excellence",
+    ],
   },
 } as const;

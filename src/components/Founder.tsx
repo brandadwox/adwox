@@ -50,11 +50,11 @@ export default function Founder() {
 
                 {/* Brand pillars */}
                 <div className="grid grid-cols-2 gap-3 w-full max-w-xs">
-                  {["Targeted Visibility", "Maximum Reach", "Powerful Impact", "Brand Growth"].map(
+                  {["Innovation", "Quality", "Transparency", "Reliability"].map(
                     (pillar) => (
                       <div
                         key={pillar}
-                        className="text-[10px] uppercase tracking-wider text-gold/60 py-2 px-3 border border-gold/10 rounded-lg"
+                        className="text-[10px] uppercase tracking-wider text-gold/60 py-2 px-3 border border-gold/10 rounded-lg font-medium"
                       >
                         {pillar}
                       </div>
@@ -80,27 +80,55 @@ export default function Founder() {
               Meet the Founder
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-6">
-              The Vision Behind{" "}
-              <span className="text-gold-gradient">ADWOX</span>
+              About <span className="text-gold-gradient">ADWOX</span>
             </h2>
 
             {/* Bio */}
             <div className="relative mb-8">
               <Quote className="absolute -top-2 -left-2 w-8 h-8 text-gold/20" />
-              <p className="text-secondary-text text-base sm:text-lg leading-relaxed pl-8">
+              <p className="text-secondary-text text-base leading-relaxed pl-8">
                 {siteConfig.founder.bio}
               </p>
             </div>
 
-            {/* Mission */}
-            <div className="glass-card p-5 sm:p-6 mb-8">
-              <h4 className="font-heading font-semibold text-gold text-sm uppercase tracking-wider mb-2">
-                Our Mission
-              </h4>
-              <p className="text-secondary-text text-sm leading-relaxed">
-                {siteConfig.founder.mission}
-              </p>
+            {/* Mission & Vision */}
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="glass-card p-5 border border-white/5">
+                <h4 className="font-heading font-semibold text-gold text-xs uppercase tracking-wider mb-2">
+                  Our Mission
+                </h4>
+                <p className="text-secondary-text text-xs leading-relaxed">
+                  {siteConfig.founder.mission}
+                </p>
+              </div>
+              <div className="glass-card p-5 border border-white/5">
+                <h4 className="font-heading font-semibold text-gold text-xs uppercase tracking-wider mb-2">
+                  Our Vision
+                </h4>
+                <p className="text-secondary-text text-xs leading-relaxed">
+                  {siteConfig.founder.vision}
+                </p>
+              </div>
             </div>
+
+            {/* Core Values */}
+            {siteConfig.founder.values && (
+              <div className="mb-8">
+                <h4 className="font-heading font-semibold text-gold text-xs uppercase tracking-wider mb-3">
+                  Core Values
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {siteConfig.founder.values.map((val) => (
+                    <span
+                      key={val}
+                      className="bg-white/5 border border-white/10 text-secondary-text text-xs px-3 py-1.5 rounded-full"
+                    >
+                      {val}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Contact info */}
             <div className="flex flex-col sm:flex-row gap-4">

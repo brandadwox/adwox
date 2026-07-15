@@ -104,23 +104,25 @@ export default function ServiceDetails() {
                     </div>
                   </div>
 
-                  {/* Long-term Value */}
-                  <div className="glass-card p-5 sm:p-6">
-                    <h3 className="font-heading text-lg font-semibold text-gold mb-4">
-                      Long-Term Value
-                    </h3>
-                    <div className="grid grid-cols-2 gap-3">
-                      {service.longTermValue.map((value, i) => (
-                        <div
-                          key={i}
-                          className="flex items-start gap-2 text-sm"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0 mt-1.5" />
-                          <span className="text-secondary-text">{value}</span>
-                        </div>
-                      ))}
+                  {/* Target Industries */}
+                  {service.targets && (
+                    <div className="glass-card p-5 sm:p-6 border border-gold/10">
+                      <h3 className="font-heading text-lg font-semibold text-gold mb-4">
+                        {service.targetLabel || "Perfect For"}
+                      </h3>
+                      <div className="grid grid-cols-2 gap-3">
+                        {service.targets.map((target, i) => (
+                          <div
+                            key={i}
+                            className="flex items-start gap-2 text-sm"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0 mt-1.5" />
+                            <span className="text-secondary-text">{target}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   {/* CTA */}
                   <a

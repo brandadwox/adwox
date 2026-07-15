@@ -3,43 +3,49 @@
 import { motion } from "framer-motion";
 import {
   MessageSquare,
-  ClipboardList,
-  Wrench,
+  Map,
+  FileImage,
+  Rocket,
   RefreshCw,
-  BarChart3,
+  FileCheck2,
 } from "lucide-react";
 
 const steps = [
   {
     icon: MessageSquare,
-    title: "Consultation",
-    description: "Understanding your brand, goals, and target audience.",
+    title: "Campaign Consultation",
+    description: "Understand your business objectives.",
   },
   {
-    icon: ClipboardList,
-    title: "Planning",
-    description: "Strategic location selection and campaign design.",
+    icon: Map,
+    title: "Location Planning",
+    description: "Select the most effective advertising platforms and routes.",
   },
   {
-    icon: Wrench,
-    title: "Installation",
-    description: "Premium LED display installation at chosen sites.",
+    icon: FileImage,
+    title: "Creative Approval",
+    description: "Upload or design your advertisement.",
+  },
+  {
+    icon: Rocket,
+    title: "Campaign Launch",
+    description: "Your advertisement goes live across the ADWOX Network.",
   },
   {
     icon: RefreshCw,
-    title: "Content Updates",
-    description: "Dynamic content management with real-time updates.",
+    title: "Advertisement Updates",
+    description: "Simply send us the updated artwork—we'll replace it during your campaign.",
   },
   {
-    icon: BarChart3,
-    title: "Monitoring",
-    description: "Ongoing performance tracking and optimization.",
+    icon: FileCheck2,
+    title: "Campaign Completion",
+    description: "Receive campaign reports, photographs, and performance documentation.",
   },
 ];
 
 export default function Process() {
   return (
-    <section className="py-20 sm:py-28 section-dark relative overflow-hidden">
+    <section id="process" className="py-20 sm:py-28 section-dark relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -50,23 +56,22 @@ export default function Process() {
           className="text-center mb-16"
         >
           <span className="text-gold text-sm font-medium tracking-widest uppercase">
-            How It Works
+            How ADWOX Works
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4">
             Our <span className="text-gold-gradient">Process</span>
           </h2>
           <p className="text-secondary-text max-w-2xl mx-auto text-base sm:text-lg">
-            From first conversation to live campaign, creating a seamless journey to
-            powerful brand visibility.
+            From consultation to reports, we handle every detail of your campaign management.
           </p>
         </motion.div>
 
         {/* Timeline — Desktop */}
-        <div className="hidden md:block relative">
+        <div className="hidden lg:block relative">
           {/* Connecting line */}
           <div className="absolute top-12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
-          <div className="grid grid-cols-5 gap-4">
+          <div className="grid grid-cols-6 gap-4">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -75,22 +80,22 @@ export default function Process() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: index * 0.12 }}
-                  className="text-center relative"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-center relative animate-fade-in"
                 >
                   {/* Node */}
-                  <div className="w-24 h-24 rounded-full border border-gold/30 bg-dark-card flex items-center justify-center mx-auto mb-5 relative z-10 group hover:border-gold/60 transition-colors">
-                    <Icon className="w-8 h-8 text-gold" />
+                  <div className="w-20 h-20 rounded-full border border-gold/30 bg-dark-card flex items-center justify-center mx-auto mb-5 relative z-10 group hover:border-gold/60 transition-colors">
+                    <Icon className="w-7 h-7 text-gold" />
                     {/* Step number */}
                     <span className="absolute -top-1 -right-1 w-6 h-6 bg-gold-gradient text-dark rounded-full text-xs font-bold flex items-center justify-center">
                       {index + 1}
                     </span>
                   </div>
 
-                  <h3 className="font-heading font-bold text-base mb-2">
+                  <h3 className="font-heading font-bold text-sm mb-2 text-white">
                     {step.title}
                   </h3>
-                  <p className="text-secondary-text text-xs sm:text-sm leading-relaxed px-2">
+                  <p className="text-secondary-text text-xs leading-relaxed px-1">
                     {step.description}
                   </p>
                 </motion.div>
@@ -100,7 +105,7 @@ export default function Process() {
         </div>
 
         {/* Timeline — Mobile */}
-        <div className="md:hidden space-y-6">
+        <div className="lg:hidden space-y-6">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
@@ -109,7 +114,7 @@ export default function Process() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="flex gap-4 items-start"
               >
                 {/* Step indicator */}
@@ -121,13 +126,13 @@ export default function Process() {
                     </span>
                   </div>
                   {index < steps.length - 1 && (
-                    <div className="w-px h-8 bg-gold/20 mt-2" />
+                    <div className="w-px h-12 bg-gold/20 mt-2" />
                   )}
                 </div>
 
                 {/* Content */}
                 <div className="pt-2">
-                  <h3 className="font-heading font-bold text-base mb-1">
+                  <h3 className="font-heading font-bold text-base mb-1 text-white">
                     {step.title}
                   </h3>
                   <p className="text-secondary-text text-sm leading-relaxed">
